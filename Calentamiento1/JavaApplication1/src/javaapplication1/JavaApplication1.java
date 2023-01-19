@@ -4,6 +4,7 @@
  */
 package javaapplication1;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 /**
  *
  * @author PC-Asus
@@ -15,14 +16,14 @@ public class JavaApplication1 {
      */
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
-        int casos = lector.nextInt();
+        int casos = Integer.parseInt(lector.nextLine());
        
-        String datos[]; 
+        String datos[] = null; 
         for(int i= 0; i<casos; i++){
 
-            String entrada = lector.next();
-            datos = entrada.split(",");
-           
+            String entrada = lector.nextLine();
+            datos = entrada.split(" ");
+            
             int num1 = Integer.parseInt(datos[0]);
             int num2 = Integer.parseInt(datos[1]);
             int num3 = Integer.parseInt(datos[2]);
@@ -46,4 +47,4 @@ public class JavaApplication1 {
         }
     }
     
-}
+}  
